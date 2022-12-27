@@ -17,7 +17,7 @@ services:
     volumes:
       - wordpress-html:/var/www/html
     ports:
-      - 80:80
+      - 80:81
     restart: always
     environment:
       - WORDPRESS_DB_HOST=database
