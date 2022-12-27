@@ -1,5 +1,3 @@
----
-version: "2"
 services:
   homer:
     image: b4bz/homer
@@ -10,8 +8,10 @@ services:
       - homer:/www/assets
     ports:
       - 8080:80
-    user: 1000:1000 # default
+    user: arne:arne
     environment:
       - INIT_ASSETS=1 # default
+    restart:
+      always
 volumes:
   homer:
