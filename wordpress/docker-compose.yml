@@ -15,7 +15,7 @@ services:
   wordpress:
     image: wordpress
     volumes:
-      - wordpress-data:/var/www/html
+      - wordpress-html:/var/www/html
     ports:
       - 80:80
     restart: always
@@ -24,4 +24,7 @@ services:
       - WORDPRESS_DB_USER=wordpress
       - WORDPRESS_DB_PASSWORD=wordpress
       - WORDPRESS_DB_NAME=wordpress
+volumes:
+  wordpress-database:
+  wordpress-html:
     
